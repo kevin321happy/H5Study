@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript变量的提升</title>
+	<!-- js中变量的提升的特性,变量的申明总是会被提升到函数的顶部 -->
+</head>
+<body>
+	<!-- js代码要写在javascript中 -->
+	<script type="text/javascript">
+		var name="Name叫kevin"
+		function testName() {
+		 	// 变量在函数外的声明无效,由于变量的提升特性,申明被提升到了函数的顶部
+		 	document.writeln("打出的名字:"+name+"<br>")
+		 	var name="我是真的名字"
+		 	document.writeln("第二次打出来的名字："+name+"<br>");
+		 	// body...
+		 }
+		 // 调用方法
+		 testName();
+		</script>
+
+		
+	</body>
+	</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的提升</title>
+</head>
+<body>
+	<script type="text/javascript">
+		print();
+		// js会自动提升函数到顶端
+		function print() {
+			// body...
+			document.writeln("提升函数吧");
+		}
+
+	</script>
+	
+</body>
+</html>

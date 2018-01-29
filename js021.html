@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    
+	<title>addEventListener</title>
+</head>
+<body>
+	<p>eventName 表示事件名称。例如，单击事件传入”click”即可</p>
+	<br>
+	<p>handle 表示处理事件的函数</p>
+	<br>
+	<p>
+    useCapture 该boolean类型参数用于指定监听事件传播的哪个阶段。其中，false表示监听冒泡阶段；true表示监听捕获阶段
+</p>
+
+<br>
+<br>
+<button id="button"> 点击我啊</button>
+
+<script type=text/javascript>
+	var  	buttonClick=function () {
+		alert("hahah我被电击了");
+		// body...
+	}
+	
+	var b=document.getElementById("button");
+
+	b.addEventListener("click",buttonClick,false);
+</script>
+</body>
+</html>

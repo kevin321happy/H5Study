@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/phone.js"></script>
+  <title>我的学习</title>
+  <style>
+	html,body{
+		margin:0;
+		padding:0;
+		color:#555;
+		width:100%;
+		height:100%;
+		background-color:#fff;
+		font-family: "Microsoft YaHei", 微软雅黑;
+		box-sizing: border-box;
+	}
+	#moblic{
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		background-color:#f8fdfd;
+	}
+	.moblicNav{
+		overflow:hidden;
+		background-color:#fff;
+		border-bottom:1px solid #ececec;
+		text-align:center;
+		margin:0.4rem 0 0;
+	}
+	.moblicNav ul{
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.moblicNav ul li{
+		width:25%;
+		margin:0
+		padding:0.3rem 0 0.1rem;
+		float:Left;
+		text-align:center;
+	}
+	.moblicNav ul li a{
+		text-decoration:none;
+		display:inline-block;
+		font-size:0.24rem;
+		color:#313131;
+	}
+	.moblicNav ul li img{
+		display:block;
+		margin:0 auto;
+		padding:0;
+		width:1rem;
+		height:1rem;
+	}
+	.moblicNav ul li span{
+		padding:0.12rem 0;
+		display:inline-block;
+	}
+	.weekly{
+		margin:32px 0 0;
+		background-color:#fff;
+		border-top:1px solid #ececec;
+	}
+	.studyTab{
+		width:100%;
+		height:0.8rem;
+		line-height:0.8rem;
+		margin:0;
+		padding:0;
+		border-bottom:3px solid #ececec;
+		display:inherit;	
+	}
+	.studyTab tab-item{
+		width:49%;
+		font-size:0.24rem;
+		text-align:center;
+		display:inline-block;
+		float:Left;
+		height:0.6rem;
+		line-height:0.6rem;
+		padding:0.1rem 0;
+	}
+	.studyTab .studyOne{
+		border-right:1px solid #c5c3c3;
+	}
+	.studyTab .selected{
+		color:#ff6455;
+	}
+	.studyCont{
+		margin:0;
+		padding:0;
+		overflow:hidden;
+		width:100%;
+	}
+	.studyCont ul{
+		padding:0;
+		margin:0;
+	}
+	.studyCont ul li{
+		padding:0;
+		border-bottom:16px solid #f3f8f8;
+	}
+	.studyInfo{
+		border-bottom:1px solid #ececec;
+		padding:0.27rem 0 0.34rem;
+		display:inline-block;
+		width:100%;
+	}
+	.studyInfo img{
+		width:1.48rem;
+		height:1rem;
+		margin:0 0 0 0.4rem;
+		padding:0;
+		float:left;
+	}
+	.studyInfoRight{
+		width:68%;
+		display:inline-block;
+		margin-left:0.16rem;
+		float:left;
+	}
+	.classTitle{
+		font-size:0.28rem;
+		margin:0 0  0.28rem;
+		padding:0;
+		font-weight:normal;
+		color:#0f0e0e;
+		height: 0.3rem;
+		line-height: 0.3rem;
+	}
+	.lecturer{
+		font-size:0.24rem;
+		margin:0;
+		padding:0;
+		font-weight:normal;
+		color:#686868;
+	}
+	.studyProgress{
+		overflow:hidden;
+		height:0.54rem;
+		line-height:0.54rem;
+		padding:0 0 0.18rem;
+		border-bottom:1px solid #ececec;
+	}
+	.publicButton{
+		display:inline-block;
+		width:1.36rem;
+		height:0.54rem;
+		line-height:0.54rem;
+		color:#fff;
+		background-color:#ff6455;
+		border:3px solid #e3301e;
+		font-size:0.24rem;
+		text-align:center;
+		border-radius:10px;
+		float:right;
+		margin:0 0.4rem 0 0;
+	}
+	.progress{
+		font-size:0.26rem;
+		color:#ff6455;
+		padding:0 0.4rem;
+	}
+	.progressImg{
+		width:1rem;
+		height:0.1rem;
+		border-radius:20px;
+		border:3px solid #00ad7d;
+		background-color:#28d2a1;
+		display:inline-block;
+		margin:0 0.12rem 0 0;
+	}
+	
+
+  </style>
+ </head>
+ <body>
+	<div id="moblic">
+		<!-- 公共导航 -->
+		<div class="moblicNav">
+			<ul>
+				<li><a href=""><img src="img/study_icon.png"><span>我的学习</span></a></li>
+				<li><a href=""><img src="img/exam_icon.png"><span>我的考试</span></a></li>
+				<li><a href=""><img src="img/class_icon.png"><span>企业公开课</span></a></li>
+				<li><a href=""><img src="img/my_icon.png"><span>个人中心</span></a></li>
+			</ul>
+		</div>
+		<!-- 内容部分 -->
+		<div class="weekly">	  
+		  <tab class="studyTab">
+			  <tab-item selected class="studyOne selected" selected @on-item-click="onItemClick">学习中</tab-item>
+			  <tab-item @on-item-click="onItemClick">已学完</tab-item>
+		 </tab>
+		  <div class="studyCont">
+			<ul>
+				<li>
+					<div class="studyInfo">
+						<img src="img/class_img.png">
+						<div class="studyInfoRight">
+							<h5 class="classTitle">如何构建服务体系</h5>
+							<p class="lecturer">讲师：裘马草堂</p>
+						</div>
+					</div>
+					<div class="studyProgress">
+						<a class="publicButton">去学习</a>
+						<div class="progress"><x-progress :percent="percent1" class="progressImg"></x-progress>30%</div>
+					</div>
+				</li>
+				<li>
+					<div class="studyInfo">
+						<img src="img/class_img.png">
+						<div class="studyInfoRight">
+							<h5 class="classTitle">如何构建服务体系</h5>
+							<p class="lecturer">讲师：裘马草堂</p>
+						</div>
+					</div>
+					<div class="studyProgress">
+						<a class="publicButton">去学习</a>
+						<div class="progress"><x-progress :percent="percent1" class="progressImg"></x-progress>30%</div>
+					</div>
+				</li>
+			</ul>
+		  </div><!-- studyCont -->
+		</div><!-- studyCont -->
+	</div><!-- moblic -->
+ </body>
+</html>

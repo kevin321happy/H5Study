@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Position定位</title>
+	<style type="text/css">
+		/*通配符标签,设置所有的标签的统一的样式*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		div{
+			width: 500px;
+			height: 200px;
+			background-color: yellowgreen;
+			border: 1px solid red;
+			/*static是css的默认的样式,当设置为static时在设置top,right是无效的*/
+			/*position: static;*/
+			position: relative;
+			left :100px;
+			top :100px;
+			right:; 50px
+		}
+	</style>
+	<!-- 嵌套情况下,如果父元素设置了static之外的定定位,那就是相对父元素的左上偏移,否则是屏幕左上的偏移 -->
+</head>
+<body>
+	<div></div>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navigator</title>
+</head>
+<body>
+	<script type="text/javascript"> 
+		console.log(window.navigator);
+// 如果支持定位
+if (navigator.geolocation {
+	navigator.geolocation.getCurrentPosition(success,erro,option);
+}else{
+	alert("抱歉,您当前的设备不支持定位");
+}
+
+//定位成功
+function success(position) {
+	var longti=position.coords.longitude;
+	var lati=position.coords.latitude;
+
+	alert("经纬度："+longti+lati);
+	// body...
+}
+//定位失败
+function erro(erro){
+	alert(erro.code+","+erro.message);
+}
+var option={
+	timeout:2000;
+};
+
+</script>
+
+</body>
+</html>

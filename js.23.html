@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<style type="text/css">
+	canvas{
+		border: 2px;
+		border-style: solid;
+		border-color: red;
+	}
+
+
+</style>
+
+</head>
+<body>
+	<canvas id="canvas" width="600px" height="300px"></canvas>
+	<br>
+	<button onclick="startDraw()">开始绘制</button>
+
+	<script type="text/javascript">
+		//出发点击事件的方法,开始绘制
+		var startDraw=function() {
+
+			var can=document.getElementById("canvas");
+//crc相当画笔
+var crc2d=can.getContext("2d");
+//绘制矩形
+// crc2d.fillStyle="yellowgreen";
+// crc2d.fillRect(10,10,100,100); 
+//绘制圆
+// crc2d.beginPath();
+// crc2d.arc(70,70,50,0,2*Math.PI);
+// crc2d.fillStyle="blue";
+// crc2d.stroke();
+//绘制文字
+// crc2d.font="40px 宋体";
+// crc2d.fillText("哈哈哈",80,80);
+
+//绘制图片
+
+        var myGirlImage=new Image();
+        myGirlImage.src="ic_lyon.jpg";
+        myGirlImage.onload=function(){
+            crc2d.drawImage(myGirlImage,0,0);
+        }
+  
+
+
+  	// body...
+  }
+
+</script>
+
+</body>
+</html>

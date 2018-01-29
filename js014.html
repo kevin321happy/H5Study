@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承的实现方式2(原型的方式)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+function Dog(argument) {
+	// this.species="wangcai"
+	// this.wa=function(){
+	// 	document.writeln("汪汪汪.....");
+	// }
+	// // body...
+}
+Dog.prototype.species="wangcai";
+Dog.prototype.wa=function(){
+	document.writeln("汪汪汪.....");
+}
+
+//Personal对象
+		function Personal(name ,age) {
+			this.name=name;
+			this.age=age;
+			// 实现继承
+			Dog.apply(this,arguments);
+			//匿名函数
+			this.study=function(){
+				document.writeln("学习啊..."+"<br>");
+			}
+			// body...
+		}
+		//以下方式实现继承有些不妥,一个对象的原型变了另一个对象的原型也会改变
+
+		// Personal.prototype=Dog.prototype;
+		// // 自己的构造
+		// Personal.prototype.constructor=Personal;
+		// var student=new Personal("张学友",10);
+		// student.study();
+		// student.wa();
+
+		//定义中间的nullFunction来接收完成转换
+		var nullFunction=function(){};
+		nullFunction.prototype=Dog.prototype;
+		Personal.prototype=nullFunction.prototype;
+		var student=new Personal("张学友",10);
+		student.study();
+		student.wa();
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	修改Dom标签</title>
+	<script type="text/javascript">
+    var updataValue=function () {
+    	var javaNode=document.getElementById("java");
+            javaNode.innerHTML="J2EE";
+            var introduceNode=document.getElementById("introduce");
+            introduceNode.value="积累技术，沉淀生活";
+
+    	//先查出来然后修改
+   // var javaValue=document.getEmentById("java");
+   // javaValue.innerHTML="JAVAEE"; 	
+   // var interducuValue=document.getEmentById("interduce");
+   // interducuValue.innerHTML="热爱技术";
+   
+   // interducuValue="热爱技术,热爱生活";
+
+
+    	// body...
+    }
+
+	</script>
+</head>
+
+<body>
+
+	<ol>	
+		<li>	Android</li>
+		<li id="java">	Java</li>
+		<li>	IOS</li>
+		<li>	PHP</li>
+	</ol>
+	<textarea  id="interduce" cols="20" rows="3">坚持原创,热衷分享</textarea>
+	<br>	
+	<br>	
+
+	<input type="button" value="修改标签内容" onclick="updataValue();">
+	
+</body>
+</html>

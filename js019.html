@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Doc删除</title>
+	<script type="text/javascript">
+		var deleteNode=function(){
+			var netNode=document.getElementById("net");
+			var courseNode=document.getElementById("course");
+			courseNode.removeChild(netNode);
+		}
+	</script>
+</head>
+<body>
+
+	<ol id="course">
+		<li>数据结构</li>
+		<li id="net">计算机网络</li>
+		<li>计算机组成原理</li>
+	</ol>
+	<input type="button" value="删除标签" onclick="deleteNode();">
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册表单</title>
+</head>
+<body>
+	<form id="userform"  action="www.baidu.com" method="get"
+	title="用户注册表单" target="_self" enctype="multipart/form-data">
+	<!-- 最外层的框框 -->
+	<fieldset>
+		<!-- 外层框框上的标题 -->
+		<legend>用户注册信息</legend>
+		<br>
+		<!-- input输入框 -->
+		昵称：<input type="text" name="un" maxlength="10" value="Kevin" >
+		<br>
+		<br>
+		密码：<input type="text" type="password" name="xex" maxlength="10">
+
+		<br>
+		<br>
+		<!-- 单选框 -->
+		性别：<input type="radio" name="gender" value="m" checked="checked">男
+		<input type="radio" name="gender" value="w">女
+
+		<input type="userphoto" type="file" name="profile">
+		<br>
+		<br>
+		籍贯：<select name="province" >
+			<option >武汉</option>
+			<option >长沙</option>
+			<option >上海</option>
+			<option >广州</option>
+			<option selected="selected">广州</option>	
+		</select>
+		<br>
+		<br>
+		爱好:<input name="hobby" type="checkbox">读书
+		<input name="hobby" type="checkbox" checked="checked">跑步
+		<input name="hobby" type="checkbox">上网
+		<br>
+		<br>
+
+		个人简介
+		<br>
+		<textarea name="indroduce"  cols="30" rows="10">请输入个人简介.....</textarea>
+		<br>
+		<br>
+
+		
+		个人网站：<input type="url" name="userurl" >
+		<br>
+		个人邮箱：<input type="email" name="userurl" >
+		<br>
+		个人体重：<input type="number" name="userweight">
+		<br>
+		出生日期:<input type="date" name="userdata">
+		<br>
+		详细时间:<input type="time" name="detaildata">
+		<br>
+		喜欢的颜色:<input type="color" name="usercolor">
+
+		<br>
+		<br>
+		<br>
+		<input type="submit" value="开始注册">
+		<input type="reset" value="重置">
+
+	</fieldset>
+
+
+
+</form>
+<!-- 可以在form表单之外也能提交信息 -->
+毕业院校:<input type="text" name="school" form="userform">
+
+<!-- datalist标签 -->
+
+<form action="url" method="get">
+	请输入你最喜欢的女明星:<input type="text" name="name" list="namesList">
+</form>
+<datalist id="namesList">
+	<option value="lbb">李冰冰</option>
+	<option value="fbb">范冰冰</option>
+	<option value="gyy">高圆圆</option>
+</datalist>
+
+</body>
+</html>

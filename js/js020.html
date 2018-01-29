@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件处理机制</title>
+</head>
+<body>
+	
+<!-- 第一种方式处理点击事件 -->
+	<button id="bt1" onclick="btClick();">点击了Bt1</button>
+<br>
+<br>
+<button id="button">Please click me</button>
+
+<!-- 点击事件的处理 -->
+	<script type="text/javascript">
+		var btClick=function () {
+			alert("点击了Button1");
+			// body...
+		}
+//第二种方式根据ID找到Button,然后绑定点击
+  var b=document.getElementById("button");
+        b.onclick=function(){
+            alert("You click the button");
+        };
+
+</script>
+
+</body>
+</html>

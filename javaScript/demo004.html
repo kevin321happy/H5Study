@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo004</title>
+</head>
+<body>
+
+<script>
+    //改变灯泡的状态
+    function ChangeIma() {
+        deng = document.getElementById("dengpao");
+        if (deng.src.match("li")) {
+            deng.src = "../img/dp_mie.png"
+        } else {
+            deng.src = "../img/dp_liang.png"
+        }
+    }
+</script>
+
+<img id="dengpao" src="../img/dp_mie.png" width="100" height="100" onclick="ChangeIma()">
+
+<br>
+
+<p>这就是一个普通的灯泡</p>
+
+</body>
+</html>

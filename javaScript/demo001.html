@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--显示时间-->
+    <title>我的第一个javaScript程序</title>
+    <script>
+        function displayData() {
+            document.getElementById("dataText").innerHTML = Date();
+        }
+    </script>
+</head>
+<body>
+<p id="dataText">这是一个段落</p>
+<button type="button" onclick="displayData()">显示日期</button>
+</body>
+</html>
